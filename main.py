@@ -1,6 +1,7 @@
 import pandas
 
 # new_dict = {new_key: new_value for (key, value) in dict.items()}
+# new_list = [new_item for item in list]
 
 #TODO 1. Create a dictionary in this format:
 # {"A": "Alfa", "B": "Bravo"}
@@ -20,12 +21,11 @@ nato_alphabet_dict = {row.letter: row.code for (index, row) in nato_alphabet_dat
 
 # Declare a list whose elements are the phonetic representations
 #   of each letter in a word
-phonetic_list = []
+
 # Ask user for a word to convert to phonetic representation
 word = input("Enter a word: ").upper()
 # Loop through the letters in the user entered word and
 #   append the phonetic representation to phonetic_list
-for letter in word:
-    phonetic_list.append(nato_alphabet_dict[letter])
+phonetic_list = [nato_alphabet_dict[letter] for letter in word]
 
 print(phonetic_list)
